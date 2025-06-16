@@ -1,9 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View, Image } from "react-native";
 
 export default function App() {
   return (
     <View style={styles.container}>
+      <Image
+        source={{ uri: "https://picsum.photos/200/300" }}
+        style={{ width: "100%", aspectRatio: 16/9 }}
+      />
+      <Image
+        source={require("./assets/tranml.jpg")}
+        style={{
+          width: 150,
+          height: 150,
+          borderRadius: 75,
+          borderWidth: 5,
+          borderColor: "white",
+          marginTop: -75,
+        }}
+      />
       <Text style={styles.text}>Tran Minh Luan</Text>
       <Text style={styles.text}>the44secrets@gmail.com</Text>
       <StatusBar style="auto" />
@@ -13,13 +28,12 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1/4,
-    backgroundColor: '#000000',
-    alignItems: 'flex-end', // put item to the right side
-    justifyContent: 'flex-end', // put item to the bottom
-    padding: 16
+    flex: 1,
+    backgroundColor: "#000000",
+    alignItems: "center", // put item to the right side
+    justifyContent: "flex-start", // put item to the top
   },
   text: {
-    color: "#ffffff"
-  }
+    color: "#ffffff",
+  },
 });
