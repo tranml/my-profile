@@ -1,12 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image } from "react-native";
+import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Image
         source={{ uri: "https://picsum.photos/200/300" }}
-        style={{ width: "100%", aspectRatio: 16/9 }}
+        style={{ width: "100%", aspectRatio: 16 / 9 }}
       />
       <Image
         source={require("./assets/tranml.jpg")}
@@ -21,6 +22,12 @@ export default function App() {
       />
       <Text style={styles.text}>Tran Minh Luan</Text>
       <Text style={styles.text}>the44secrets@gmail.com</Text>
+
+      <View style={{flexDirection: "row", gap: 20, marginVertical: 20}}>
+        <FontAwesome6 name="at" size={24} color="white" />
+        <FontAwesome6 name="phone" size={24} color="white" />
+        <FontAwesome6 name="twitter" size={24} color="white" />
+      </View>
       <StatusBar style="auto" />
     </View>
   );
