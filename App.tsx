@@ -6,6 +6,7 @@ import {
   Image,
   ScrollView,
   Button,
+  ActivityIndicator,
 } from "react-native";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
@@ -32,6 +33,16 @@ export default function App() {
       </View>
     );
   };
+
+  const isLoading = false;
+
+  if (isLoading) {
+    return (
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#000000" }}>
+        <ActivityIndicator size="large" color="#ffffff" />
+      </View>
+    );
+  }
 
   return (
     <SafeAreaProvider>
