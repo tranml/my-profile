@@ -22,14 +22,26 @@ export default function App() {
     return {
       name: "Tran Minh Luan",
       email: "tran@fluco.app",
+      links: {
+        email: "",
+        phone: "+84338027081",
+        twitter: "https://x.com/tranmlcom",
+      },
     };
   };
   const renderContactIcons = () => {
+    const links = getUserInfo().links;
     return (
       <View style={{ flexDirection: "row", gap: 20, marginVertical: 20 }}>
-        <FontAwesome6 name="at" size={24} color="white" />
-        <FontAwesome6 name="phone" size={24} color="white" />
-        <FontAwesome6 name="twitter" size={24} color="white" />
+        {links.email !== "" ? (
+          <FontAwesome6 name="at" size={24} color="white" />
+        ) : null}
+        {links.phone !== "" ? (
+          <FontAwesome6 name="phone" size={24} color="white" />
+        ) : null}
+        {links.twitter !== "" ? (
+          <FontAwesome6 name="twitter" size={24} color="white" />
+        ) : null}
       </View>
     );
   };
@@ -51,7 +63,7 @@ export default function App() {
     );
   }
 
-  const remainingActiveDays = 0;
+  const remainingActiveDays = 100;
 
   return (
     <SafeAreaProvider>
@@ -76,7 +88,9 @@ export default function App() {
             <Text style={styles.text}>{getUserInfo().name}</Text>
             <Text style={styles.text}>{getUserInfo().email}</Text>
 
-            <Text style={{ color: "white", marginHorizontal: 20, lineHeight: 20 }}>
+            <Text
+              style={{ color: "white", marginHorizontal: 20, lineHeight: 20 }}
+            >
               There are {remainingActiveDays || "no"} days left to renew your
               subscription
             </Text>
