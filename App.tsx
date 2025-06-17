@@ -14,6 +14,25 @@ export default function App() {
   const onPressContactMe = () => {
     console.warn("Contact me");
   };
+
+  const buttonTitle = "Contact Tran";
+
+  const getUserInfo = () => {
+    return {
+      name: "Tran Minh Luan",
+      email: "tran@fluco.app",
+    };
+  };
+  const renderContactIcons = () => {
+    return (
+      <View style={{ flexDirection: "row", gap: 20, marginVertical: 20 }}>
+        <FontAwesome6 name="at" size={24} color="white" />
+        <FontAwesome6 name="phone" size={24} color="white" />
+        <FontAwesome6 name="twitter" size={24} color="white" />
+      </View>
+    );
+  };
+
   return (
     <SafeAreaProvider>
       <SafeAreaView edges={["bottom"]} style={{ backgroundColor: "#000000" }}>
@@ -34,17 +53,13 @@ export default function App() {
                 marginTop: -75,
               }}
             />
-            <Text style={styles.text}>Tran Minh Luan</Text>
-            <Text style={styles.text}>the44secrets@gmail.com</Text>
+            <Text style={styles.text}>{getUserInfo().name}</Text>
+            <Text style={styles.text}>{getUserInfo().email}</Text>
 
-            <View style={{ flexDirection: "row", gap: 20, marginVertical: 20 }}>
-              <FontAwesome6 name="at" size={24} color="white" />
-              <FontAwesome6 name="phone" size={24} color="white" />
-              <FontAwesome6 name="twitter" size={24} color="white" />
-            </View>
+            {renderContactIcons()}
 
             <Button
-              title="Contact me"
+              title={buttonTitle}
               accessibilityLabel="Contact me via email"
               onPress={onPressContactMe}
             />
