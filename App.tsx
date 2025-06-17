@@ -38,7 +38,14 @@ export default function App() {
 
   if (isLoading) {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#000000" }}>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "#000000",
+        }}
+      >
         <ActivityIndicator size="large" color="#ffffff" />
       </View>
     );
@@ -69,11 +76,10 @@ export default function App() {
             <Text style={styles.text}>{getUserInfo().name}</Text>
             <Text style={styles.text}>{getUserInfo().email}</Text>
 
-            {!!remainingActiveDays && (
-              <Text style={styles.text}>
-                {remainingActiveDays} days remaining
-              </Text>
-            )}
+            <Text style={{ color: "white", marginHorizontal: 20, lineHeight: 20 }}>
+              There are {remainingActiveDays || "no"} days left to renew your
+              subscription
+            </Text>
 
             {renderContactIcons()}
 
