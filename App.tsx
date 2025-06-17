@@ -44,6 +44,8 @@ export default function App() {
     );
   }
 
+  const remainingActiveDays = 0;
+
   return (
     <SafeAreaProvider>
       <SafeAreaView edges={["bottom"]} style={{ backgroundColor: "#000000" }}>
@@ -66,6 +68,12 @@ export default function App() {
             />
             <Text style={styles.text}>{getUserInfo().name}</Text>
             <Text style={styles.text}>{getUserInfo().email}</Text>
+
+            {!!remainingActiveDays && (
+              <Text style={styles.text}>
+                {remainingActiveDays} days remaining
+              </Text>
+            )}
 
             {renderContactIcons()}
 
