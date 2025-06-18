@@ -67,7 +67,7 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <SafeAreaView edges={["bottom"]} style={{ backgroundColor: "#000000" }}>
+      <SafeAreaView edges={["bottom"]} style={{ backgroundColor: "#000000", flex: 1 }}>
         <ScrollView>
           <View style={styles.container}>
             <Image
