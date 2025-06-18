@@ -7,13 +7,14 @@ import {
   ScrollView,
   Button,
   ActivityIndicator,
+  Linking,
 } from "react-native";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 export default function App() {
   const onPressContactMe = () => {
-    console.warn("Contact me");
+    Linking.openURL("mailto:tran@fluco.app");
   };
 
   const buttonTitle = "Contact Tran";
