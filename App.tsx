@@ -20,8 +20,8 @@ export default function App() {
 
   const getUserInfo = () => {
     return {
-      name: "Tran Minh Luan",
-      email: "tran@fluco.app",
+      name: "TranML",
+      occupation: "Solo Indie Developer",
       links: {
         email: "",
         phone: "+84338027081",
@@ -83,8 +83,8 @@ export default function App() {
                 marginTop: -75,
               }}
             />
-            <Text style={styles.text}>{getUserInfo().name}</Text>
-            <Text style={styles.text}>{getUserInfo().email}</Text>
+            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold", marginTop: 10, marginBottom: 5 }}>{getUserInfo().name}</Text>
+            <Text style={{ color: "white", fontSize: 12 }}>{getUserInfo().occupation}</Text>
 
             {renderContactIcons()}
 
@@ -105,8 +105,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#000000",
-    alignItems: "center", // put item to the right side
-    justifyContent: "flex-start", // put item to the top
+    alignItems: "center",
+    justifyContent: "flex-start",
   },
   text: {
     color: "#ffffff",
