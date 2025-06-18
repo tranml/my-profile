@@ -63,8 +63,6 @@ export default function App() {
     );
   }
 
-  const remainingActiveDays = 100;
-
   return (
     <SafeAreaProvider>
       <SafeAreaView edges={["bottom"]} style={{ backgroundColor: "#000000", flex: 1 }}>
@@ -87,13 +85,6 @@ export default function App() {
             />
             <Text style={styles.text}>{getUserInfo().name}</Text>
             <Text style={styles.text}>{getUserInfo().email}</Text>
-
-            <Text
-              style={{ color: "white", marginHorizontal: 20, lineHeight: 20 }}
-            >
-              There are {remainingActiveDays || "no"} days left to renew your
-              subscription
-            </Text>
 
             {renderContactIcons()}
 
