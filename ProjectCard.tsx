@@ -1,4 +1,4 @@
-import { View, Image, Text, ImageSourcePropType } from "react-native";
+import { View, Image, Text, ImageSourcePropType, StyleSheet } from "react-native";
 
 interface ProjectCardProps {
     image: ImageSourcePropType;
@@ -7,9 +7,22 @@ interface ProjectCardProps {
 
 export default function ProjectCard(props: ProjectCardProps) {
     return (
-      <View>
-        <Image source={props.image} style={{ height: 150, aspectRatio: 16 / 9, borderRadius: 10 }} />
-        <Text style={{ fontSize: 14, color: "dimgray", marginTop: 10 }}>{props.title}</Text>
-      </View>
+        <View>
+            <Image source={props.image} style={styles.image} />
+            <Text style={styles.title}>{props.title}</Text>
+        </View>
     );
-  }
+}
+
+const styles = StyleSheet.create({
+    image: {
+        height: 150,
+        aspectRatio: 16 / 9,
+        borderRadius: 10,
+    },
+    title: {
+        fontSize: 14,
+        color: "dimgray",
+        marginTop: 10,
+    }
+})
