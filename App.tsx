@@ -11,6 +11,8 @@ import {
 } from "react-native";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import ProjectCard from "./ProjectCard";
+
 
 export default function App() {
   const onPressContactMe = () => {
@@ -94,6 +96,16 @@ export default function App() {
               accessibilityLabel="Contact me via email"
               onPress={onPressContactMe}
             />
+
+            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold", marginTop: 20 }}>My Projects</Text>
+
+            <ScrollView horizontal contentContainerStyle={{ gap: 16, padding: 16 }} showsHorizontalScrollIndicator={false}>
+              <ProjectCard title="Apple Cards" image={require("./assets/projects/project1.jpeg")} />
+              <ProjectCard title="Trello" image={require("./assets/projects/project2.jpeg")} />
+              <ProjectCard title="Flappy Bird" image={require("./assets/projects/project3.jpeg")} />
+              <ProjectCard title="Todo App" image={require("./assets/projects/project4.jpeg")} />
+            </ScrollView>
+
             <StatusBar style="light" />
           </View>
         </ScrollView>
