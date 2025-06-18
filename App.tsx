@@ -97,6 +97,10 @@ export default function App() {
               onPress={onPressContactMe}
             />
 
+            <Text style={{ color: "white", fontSize: 12, marginTop: 16, marginBottom: 8, textAlign: "center" }}>
+              I Love building language learning apps.
+            </Text>
+
             <Text style={{ color: "white", fontSize: 18, fontWeight: "bold", marginTop: 20 }}>My Projects</Text>
 
             <ScrollView horizontal contentContainerStyle={{ gap: 16, padding: 16 }} showsHorizontalScrollIndicator={false}>
