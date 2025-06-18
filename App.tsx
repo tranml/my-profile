@@ -71,7 +71,7 @@ export default function App() {
         <ScrollView>
           <View style={styles.container}>
             <Image
-              source={{ uri: "https://picsum.photos/200/300" }}
+              source={{ uri: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/pinterest/0.jpeg" }}
               style={{ width: "100%", aspectRatio: 16 / 9 }}
             />
             <Image
@@ -102,7 +102,6 @@ export default function App() {
               accessibilityLabel="Contact me via email"
               onPress={onPressContactMe}
             />
-
             <StatusBar style="light" />
           </View>
         </ScrollView>
